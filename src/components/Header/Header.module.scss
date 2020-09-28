@@ -1,0 +1,31 @@
+@import '../../global/variables.scss';
+
+.Header {
+  padding: $contentPadding;
+  background-color: antiquewhite;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .Left {
+
+    .AddButton {
+      
+    }
+  }
+  .Right {
+
+    .ThemeSelection {
+
+      .ThemeIcon {
+        display: inline-block;
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        margin: 0 0.1rem;
+        background-color: burlywood;
+      }
+    }
+  }
+}
