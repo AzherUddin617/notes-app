@@ -1,10 +1,19 @@
-body {
+@import './global/variables.scss';
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $colorBlack;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $colorGrey;
 }
 
 a {
@@ -17,6 +26,16 @@ button {
   border: none;
   outline: none;
   background: none;
+}
+input, textarea, select {
+  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+
+  &:active, &:focus {
+    outline: none;
+  }
 }
 
 code {

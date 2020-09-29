@@ -2,7 +2,8 @@
 
 .Header {
   padding: $contentPadding;
-  background-color: antiquewhite;
+  padding: 2rem 1rem;
+  background-color: $colorSecondary;
 
   display: flex;
   justify-content: space-between;
@@ -24,7 +25,8 @@
         height: 1.4rem;
         border-radius: 50%;
         margin: 0 0.1rem;
-        background-color: burlywood;
+        background-color: $colorPrimary;
+        opacity: 0.2;
       }
     }
   }
