@@ -1,0 +1,31 @@
+@import '../../../global/variables.scss';
+
+$clipSize: 1.2rem;
+.Note {
+  padding: 1rem;
+  // border: 1px solid #ccc;
+  background-color: $colorWhite;
+  box-shadow: 2px 2px 15px rgba($colorBlack, 0.2);
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - #{$clipSize}), calc(100% - #{$clipSize}) 100%, 0 100%);
+  // overflow: hidden;
+  cursor: pointer;
+  border-top: 0.2rem solid $colorWhite;
+  transition: border-color 0.4s ease;
+
+  &.Active {
+    border-color: $colorSecondary;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: $clipSize;
+    height: $clipSize;
+    background-color: #ccc;
+  }
+}
