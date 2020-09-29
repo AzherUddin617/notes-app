@@ -12,10 +12,16 @@ const initialNotes = [
   },
   {
     title: 'Note Title 2',
-    content: 'This is note content 2.',
+    content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa tempore est corrupti ipsum, ipsam quia suscipit eaque porro, placeat nesciunt odit laborum doloremque dignissimos quibusdam consequuntur voluptatibus. Impedit, consequuntur iure.',
     date: '12/07/2019'
   },
 ];
+
+const emptyNote = {
+  title: '',
+  content: '',
+  date: ''
+}
 
 const dataName = 'notes';
 
@@ -45,10 +51,16 @@ function App() {
     });
   }, [activeIndex]);
 
+  const addNote = useCallback(()=> {
+    const currentDate = new Date();
+    const date = currentDate.getDate() + '/' + currentDate.getMonth() + '/' + currentDate.getFullYear();
+    setNotes(prevNotes => [{...emptyNote, date: date}].concat(prevNotes));
+  }, []);
+
   return (
     <div className={classes.App}>
       <div className={classes.Header}>
-        <Header />
+        <Header addNote={addNote} />
       </div>
 
       <div className={classes.Body}>

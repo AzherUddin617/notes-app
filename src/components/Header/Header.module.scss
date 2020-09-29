@@ -12,7 +12,47 @@
   .Left {
 
     .AddButton {
-      
+      padding: 0.3rem 0.6rem;
+      display: flex;
+      align-items: center;
+      border-radius: 10rem;
+      border: 0.15rem solid $colorWhite;
+      cursor: pointer;
+      transition: background-color 0.4s ease;
+
+      &:hover {
+        background-color: $colorWhite;
+        .Icon {
+          transform: rotate(90deg);
+        }
+        .Text {
+          color: $colorSecondary;
+        }
+      }
+      .AddIcon {
+        
+        .Icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          padding: 0.25rem;
+          font-size: 1.25rem;
+          color: $colorSecondary;
+          margin-right: 0.5rem;
+          background-color: $colorWhite;
+          transition: transform 0.4s ease;
+          border-radius: 50%;
+  
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .Text {
+        color: $colorWhite;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.4s ease;
+      }
     }
   }
   .Right {
